@@ -1,0 +1,240 @@
+/*
+
+Copyright (c) 2016, #!/nixfixers
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without modification,
+are permitted provided that the following conditions are met:
+
+1. Redistributions of source code must retain the above copyright notice,
+   this list of conditions and the following disclaimer.
+
+2. Redistributions in binary form must reproduce the above copyright notice,
+   this list of conditions and the following disclaimer in the documentation
+   and/or other materials provided with the distribution.
+
+3. Neither the name of the copyright holder nor the names of its contributors
+   may be used to endorse or promote products derived from this software
+   without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO,
+THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.
+IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY
+DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+(INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
+HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE,
+EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+*/
+
+.nf-view {
+  height: 396px;
+  position: absolute;
+  width: 100%;
+}
+
+.nf-view-title {
+  clear: both;
+  font-size: 2em;
+  margin-top: 0.67em;
+  margin-bottom: 0.67em;
+  margin-left: 48px;
+  margin-right: 0;
+  font-weight: bold;
+}
+
+.nf-view-illustration {
+  border-color: #000000;
+  border-style: solid;
+  clear: left;
+  float: left;
+  margin-left: 48px;
+  margin-right: 10px;
+}
+
+.nf-view-content {
+  clear: right;
+  float: left;
+}
+
+.nf-view-row {
+  clear: both;
+  float: left;
+}
+
+.nf-view-row.nf-view-row-one-fourth {
+  height: 57px;
+}
+
+.nf-view-row.nf-view-row-three-fourths {
+  height: 171px;
+}
+
+.nf-view-row.nf-view-row-one-third {
+  height: 86px;
+}
+
+.nf-view-heading {
+  background-color: #000000;
+  border-color: #000000;
+  border-style: solid;
+  clear: left;
+  color: #00fe01;
+  float: left;
+  margin-right: 8px;
+  padding: 5px 10px;
+}
+
+.nf-view-info {
+  clear: right;
+  float: left;
+  height: 100%;
+}
+
+.nf-view-line {
+  display: inline-block;
+  text-align: left;
+}
+
+.nf-view-line.nf-view-line-single {
+  margin-top: 7px;
+}
+
+.nf-view-emphasis {
+  font-weight: bold;
+}
+
+#nf-view-reviews {
+  margin-left: 10px;
+  height: 316px;
+  width: 600px;
+}
+
+.nf-view-review {
+  clear: both;
+  display: none;
+  height: 316px;
+  position: absolute;
+  width: 600px;
+}
+
+.nf-view-review-text {
+  font-style: italic;
+  margin-bottom: 10px;
+}
+
+.nf-view-review-cite-name {
+  font-weight: bold;
+}
+
+.nf-view-review-cite-curr-role {
+  font-style: italic;
+}
+
+.nf-view-badge {
+  float: left;
+  margin-right: 7px;
+  margin-top: 1px;
+}
+
+.nf-view-skills-search-input {
+  width: 180px;
+}
+
+#nf-view-skills-search-skills {
+  position: absolute;
+  z-index: 99999;
+}
+
+
+.nf-view-skills-search-skill {
+  background-color: #ffffff;
+  border-left-color: #000000;
+  border-left-style: solid;
+  border-left-width: 1px;
+  border-right-color: #000000;
+  border-right-style: solid;
+  border-right-width: 1px;
+  padding-left: 1px;
+  padding-right: 1px;
+  width: 180px;
+}
+
+.nf-view-skills-search-skill:first-of-type {
+  border-top-color: #000000;
+  border-top-style: solid;
+  border-top-width: 1px;
+}
+
+.nf-view-skills-search-skill:last-of-type {
+  border-bottom-color: #000000;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+}
+
+.nf-view-skills-search-skill.hovered {
+  background-color: #cccccc;
+  font-weight: bold;
+}
+
+#nf-view-skills-search-results-query {
+  font-weight: bold;
+}
+
+#nf-view-skills-search-results-list {
+  border-color: #000000;
+  border-style: solid;
+  border-width: 1px;
+  max-height: 230px;
+  margin-top: 3px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  width: 600px;
+}
+
+.nf-view-skills-search-results-list-location {
+  background-color: #000000;
+  border-color: #000000;
+  border-style: solid;
+  border-width: 1px;
+  clear: both;
+  color: #00fe01;
+  float: left;
+  margin-bottom: 4px;
+  padding: 5px 10px;
+  width: 100%;
+}
+
+.nf-view-skills-search-results-list-project {
+  background-color: #ffffff;
+  padding: 5px 10px;
+}
+
+.nf-view-skills-search-results-list-project:nth-of-type(odd) {
+  background-color: #cccccc;
+}
+
+.nf-view-notify-backend {
+  background-color: #000000;
+  bottom: 10px;
+  clear: both;
+  color: #00fe01;
+  display: none;
+  font-size: 1.5em;
+  font-weight: bold;
+  height: 60px;
+  opacity: 0.7;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  z-index: 99999;
+}
+
+
+.nf-view-notify-backend-message {
+  display: inline-block;
+  padding-top: 16px;
+}

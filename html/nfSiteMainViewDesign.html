@@ -1,0 +1,34 @@
+          <div data-nf-site-main-view=''>
+            <div class='nf-view-row nf-view-row-one-fourth'>
+              <div class='nf-view-heading'>Server&nbsp;Side:</div>
+              <div class='nf-view-info'>
+                <span class='nf-view-line nf-view-line-double' data-ng-cloak>Current Backend: {{ currBackend.name }}</span><br>
+                <span class='nf-view-line nf-view-line-double' data-ng-if='cookiesEnabled'>Switch to Backend:
+                  <span data-ng-repeat='backend in switchBackends' data-ng-cloak>&nbsp;<a href='' data-ng-click='setBackend(backend.dirext)'>{{ backend.name }}</a>&nbsp;</span>
+                </span>
+                <span class='nf-view-line nf-view-line-double' data-ng-if='!cookiesEnabled'>Enable cookies to switch to these backends:
+                  <span data-ng-repeat='backend in switchBackends' data-ng-cloak>&nbsp;{{ backend.name }}&nbsp;</span>
+                </span>
+              </div>
+            </div>
+            <div class='nf-view-row nf-view-row-one-fourth'>
+              <div class='nf-view-heading'>Client&nbsp;Side:</div>
+              <div class='nf-view-info'>
+                <span class='nf-view-line nf-view-line-single'>AngularJS, RequireJS, jQuery, HTML5, CSS</span>
+              </div>
+            </div>
+            <div class='nf-view-row nf-view-row-one-fourth'>
+              <div class='nf-view-heading'>Database:</div>
+              <div class='nf-view-info'>
+                <span class='nf-view-line nf-view-line-single'>MySQL</span>
+              </div>
+            </div>
+            <div class='nf-view-row nf-view-row-one-fourth'>
+              <div class='nf-view-heading'>Images:</div>
+              <div class='nf-view-info'>
+                <span class='nf-view-line nf-view-line-double'>Photographed by Judy Myers Photography, Cheyenne, WY.</span><br>
+                <span class='nf-view-line nf-view-line-double'>Post-processed by !#/nixfixers with GIMP and steghide.</span>
+              </div>
+            </div>
+            <div class='{{ isNfSiteReadyClass }}' data-nf-site-main-view-ready=''></div>
+          </div>

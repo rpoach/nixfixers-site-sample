@@ -1,0 +1,215 @@
+/*
+
+Copyright (c) 2016, #!/nixfixers
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without modification,
+are permitted provided that the following conditions are met:
+
+1. Redistributions of source code must retain the above copyright notice,
+   this list of conditions and the following disclaimer.
+
+2. Redistributions in binary form must reproduce the above copyright notice,
+   this list of conditions and the following disclaimer in the documentation
+   and/or other materials provided with the distribution.
+
+3. Neither the name of the copyright holder nor the names of its contributors
+   may be used to endorse or promote products derived from this software
+   without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO,
+THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.
+IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY
+DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+(INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
+HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE,
+EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+*/
+
+/*
+**  Full Document
+*/
+html {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: 'Arial', Arial, sans-serif;
+  font-size: 1em;
+  max-width: 100%;
+  overflow-x: hidden;
+  visibility: hidden;
+}
+
+body.visible {
+  visibility: visible;
+}
+
+/*
+**  Header Section
+*/
+header {
+  background-color: #ffffff;
+  clear: both;
+  height: 150px;
+}
+
+#nf-site-logo {
+  clear: both;
+  height: 110px;
+  position: relative;
+  top: 30px;
+}
+
+#nf-site-logo-bar {
+  background-color: #000000;
+  height: 72px;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+#nf-site-logo-img {
+  position: absolute;
+  top: 0;
+}
+
+#nf-site-cursor-activate {
+  height: 72px;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+#nf-site-cursor-img {
+  display: none;
+}
+
+/*
+**  Main Section
+*/
+#nf-site-main {
+  clear: both;
+  height: 440px;
+}
+
+#nf-site-menu {
+  background-color: #000000;
+  clear: both;
+  color: #00fe01;
+  height: 44px;
+}
+
+.nf-site-menu-item {
+  border-bottom-color: #00fe01;
+  border-bottom-style: solid;
+  border-right-color: #00fe01;
+  border-right-style: solid;
+  border-top-color: #00fe01;
+  border-top-style: solid;
+  float: left;
+  margin-bottom: 5px;
+  margin-top: 5px;
+  padding: 5px 10px;
+  text-align: center;
+}
+
+.nf-site-menu-item.hovered {
+  font-weight: bold;
+}
+
+.nf-site-menu-item.selected {
+  background-color: #00fe01;
+  color: #000000;
+}
+
+.nf-site-menu-item:first-of-type {
+  border-left-color: #00fe01;
+  border-left-style: solid;
+  margin-left: 48px;
+}
+
+#nf-site-content {
+  clear: both;
+  height: 396px;
+  position: relative;
+}
+
+#nf-site-backdrop {
+  height: 396px;
+  position: absolute;
+  width: 100%;
+}
+
+#nf-site-left-fill {
+  background-image: url('/jpg/nfSiteBackgroundL.jpg');
+  background-repeat: repeat-x;
+  clear: left;
+  float: left;
+  height: 100%;
+  width: 50%;
+}
+
+#nf-site-right-fill {
+  background-image: url('/jpg/nfSiteBackgroundR.jpg');
+  background-repeat: repeat-x;
+  clear: right;
+  float: left;
+  height: 100%;
+  width: 50%;
+}
+
+#nf-site-main-image {
+  background-image: url('/jpg/nfSiteBackground.wm.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  clear: both;
+  height: 396px;
+  position: absolute;
+  width: 100%;
+}
+
+#nf-site-bg-fader {
+  background-color: #ffffff;
+  clear: both;
+  display: none;
+  height: 396px;
+  opacity: 0.8;
+  position: absolute;
+  width: 100%;
+}
+
+#nf-site-views {
+  clear: both;
+  height: 396px;
+  max-width: 100%;
+  overflow-x: hidden;
+  position: absolute;
+  width: 100%;
+}
+
+/*
+**  Footer Section
+*/
+footer {
+  background-color: #000000;
+  clear: both;
+  color: #00fe01;
+  font-size: 12pt;
+  text-align: center;
+}
+
+.nf-site-footer-text {
+  clear: both;
+  padding-bottom: 8px;
+  position: relative;
+}
+
+.nf-site-footer-text:first-of-type {
+  padding-top: 8px;
+}

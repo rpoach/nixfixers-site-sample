@@ -1,0 +1,38 @@
+          <div data-nf-site-main-view=''>
+            <div class='nf-view-row nf-view-row-one-fourth'>
+              <div class='nf-view-heading'>Search:</div>
+              <div class='nf-view-info'>
+                <form data-ng-submit='skillSubmitted($event, matchString)'>
+                  <span class='nf-view-line nf-view-line-single'>
+                    <!--  Kludge: Do not name or ID the input. This will short-circuit Chrome auto-complete -->
+                    <input class='nf-view-skills-search-input' type='text' data-ng-model='matchString'>
+                  </span>
+                </form>
+                <div id='nf-view-skills-search-skills'>
+                  <div class='nf-view-skills-search-skill'
+                       data-ng-repeat='skill in skills | skillFilter: matchString | orderBy: skill.skill | limitTo: 3'
+                       data-ng-mouseenter='skillIn($event)'
+                       data-ng-mouseleave='skillOut($event)'
+                       data-ng-click='skillClicked($event, skill)'
+                       data-ng-cloak>
+                    {{ skill.skill }}
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class='nf-view-row nf-view-row-three-fourths'>
+              <div class='nf-view-heading'>Results:</div>
+              <div class='nf-view-info'>
+                <div id='nf-view-skills-search-results' data-ng-if='query'>
+                  <div id='nf-view-skills-search-results-query'><span data-ng-if='!result'>No </span>Search Results for: {{ query }}</div>
+                  <div id='nf-view-skills-search-results-list' data-ng-if='result'>
+                    <div class='nf-view-skills-search-results-list-result' data-ng-repeat='location in locations | orderBy: location.dbId'>
+                      <div class='nf-view-skills-search-results-list-location'>{{ location.location }}</div>
+                      <div class='nf-view-skills-search-results-list-project' data-ng-repeat='project in location.projects | orderBy: project.project'>{{ project }}</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class='{{ isNfSiteReadyClass }}' data-nf-site-main-view-ready=''></div>
+          </div>

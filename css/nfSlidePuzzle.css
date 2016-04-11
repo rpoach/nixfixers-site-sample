@@ -1,0 +1,306 @@
+/*
+
+Copyright (c) 2016, #!/nixfixers
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without modification,
+are permitted provided that the following conditions are met:
+
+1. Redistributions of source code must retain the above copyright notice,
+   this list of conditions and the following disclaimer.
+
+2. Redistributions in binary form must reproduce the above copyright notice,
+   this list of conditions and the following disclaimer in the documentation
+   and/or other materials provided with the distribution.
+
+3. Neither the name of the copyright holder nor the names of its contributors
+   may be used to endorse or promote products derived from this software
+   without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO,
+THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.
+IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY
+DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+(INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
+HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE,
+EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+*/
+
+#nf-slide-puzzle {
+  clear: both;
+  height: 100%;
+  margin: 0px;
+}
+
+
+#nf-slide-puzzle-board {
+  background-color: #000000;
+  border-color: #778899;
+  border-radius: 8px;
+  border-style: solid;
+  border-width: 3px;
+  box-sizing: border-box;
+  clear: left;
+  float: left;
+  height: 100%;
+  margin: 0px;
+  padding: 1px;
+  position: relative;
+}
+
+
+#nf-slide-puzzle-board.solved {
+  border-color: darkgoldenrod;
+}
+
+
+#nf-slide-puzzle-board.unsolved {
+  border-color: black;
+}
+
+
+#nf-slide-puzzle-controls {
+  background-color: black;
+  border-color: #778899;
+  border-radius: 8px;
+  border-style: solid;
+  border-width: 3px;
+  box-sizing: border-box;
+  clear: right;
+  float: left;
+  height: 100%;
+  margin-left: 1px;
+  padding-top: 1px;
+  padding-bottom: 1px;
+  padding-left: 1px;
+  padding-right: 5px;
+  width: 280px;
+}
+
+
+.nf-slide-puzzle-tile {
+  border-color: #778899;
+  border-radius: 5px;
+  border-style: solid;
+  border-width: 3px;
+  color: #778899;
+  font-weight: bold;
+  margin: 1px;
+  position: absolute;
+  text-align: center;
+}
+
+
+.nf-slide-puzzle-tile.solved {
+  border-color: darkgoldenrod;
+}
+
+
+.nf-slide-puzzle-tile.unsolved {
+  border-color: black;
+}
+
+
+.nf-slide-puzzle-tile:nth-of-type(odd) {
+  background-color: maroon;
+}
+
+
+.nf-slide-puzzle-tile:nth-of-type(odd).shuffling {
+  color: maroon;
+}
+
+
+.nf-slide-puzzle-tile:nth-of-type(even) {
+  background-color: antiquewhite;
+}
+
+
+.nf-slide-puzzle-tile:nth-of-type(even).shuffling {
+  color: antiquewhite;
+}
+
+
+#nf-slide-puzzle-tile-final {
+  background-color: midnightblue;
+}
+
+
+#nf-slide-puzzle-tile-final.hidden {
+  display: none;
+}
+
+
+#nf-slide-puzzle-tile-final.solved {
+  background-color: darkgoldenrod;
+}
+
+
+#nf-slide-puzzle-tile-final.unsolved {
+  background-color: midnightblue;
+}
+
+
+#nf-slide-puzzle-status-bar-text {
+  clear: right;
+  color: #778899;
+  font-weight: bold;
+  line-height: 31px;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+}
+
+
+#nf-slide-puzzle-status-bar-text.solved {
+  color: darkgoldenrod;
+}
+
+#nf-slide-puzzle-status-bar-text.unsolved {
+  color: black;
+}
+
+.nf-slide-puzzle-control-container {
+  border-color: #778899;
+  border-radius: 5px;
+  border-style: solid;
+  border-width: 2px;
+  box-sizing: border-box;
+  clear: both;
+  height: 38px;
+  margin: 2px;
+  padding: 2px;
+  position: relative;
+  width: 100%;
+}
+
+
+.nf-slide-puzzle-control-container:nth-of-type(odd) {
+  background-color: maroon;
+}
+
+
+.nf-slide-puzzle-control-container:nth-of-type(even) {
+  background-color: antiquewhite;
+}
+
+.nf-slide-puzzle-control-container:first-of-type {
+  margin-top: 1px;
+}
+
+.nf-slide-puzzle-control-label {
+  clear: left;
+  color: #778899;
+  float: left;
+  font-weight: bold;
+  line-height: 31px;
+  margin-left: 2px;
+}
+
+
+.nf-slide-puzzle-control-button-set {
+  display: inline-block;
+  float: right;
+}
+  
+
+.nf-slide-puzzle-control-button {
+  border-color: #778899;
+  border-radius: 5px;
+  border-style: solid;
+  border-width: 2px;
+  color: #778899;
+  float: left;
+  margin-top: 2px;
+  padding: 2px;
+  text-align: center;
+  width: 62px;
+}
+
+
+.nf-slide-puzzle-control-play.hovered {
+  font-weight: bold;
+}
+
+
+.nf-slide-puzzle-control-play.disabled {
+  border-color: #500000;
+  color: #500000;
+}
+
+
+.nf-slide-puzzle-option-level.hovered {
+  font-weight: bold;
+}
+
+
+.nf-slide-puzzle-option-level.selected {
+  background-color: #778899;
+  color: antiquewhite;
+}
+
+
+.nf-slide-puzzle-option-level.disabled {
+  border-color: wheat;
+  color: wheat;
+}
+
+
+.nf-slide-puzzle-option-counter-set {
+  display: inline-block;
+  float: right;
+}
+  
+
+.nf-slide-puzzle-option-counter-container {
+  border-color: #778899;
+  border-radius: 5px;
+  border-style: solid;
+  border-width: 2px;
+  color: #778899;
+  float: left;
+  margin-top: 2px;
+  padding: 2px;
+  width: 95px;
+}
+
+
+.nf-slide-puzzle-option-counter-container.disabled {
+  border-color: #500000;
+  color: #500000;
+}
+
+
+.nf-slide-puzzle-option-counter-label {
+  clear: left;
+  float: left;
+  margin-left: 2px;
+}
+
+
+.nf-slide-puzzle-option-counter-label.hovered {
+  font-weight: bold;
+}
+
+
+.nf-slide-puzzle-option-counter-label.selected {
+  background-color: #778899;
+  color: maroon;
+}
+
+
+.nf-slide-puzzle-option-counter-value {
+  clear: right;
+  display: none;
+  float: right;
+  margin-right: 2px;
+}
+
+
+.nf-slide-puzzle-option-counter-value.selected {
+  display: block;
+}

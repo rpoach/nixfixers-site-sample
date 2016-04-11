@@ -1,0 +1,10 @@
+        <div id='{{ viewId }}' data-ng-controller='nfSiteMainViewController'>
+          <div class='nf-view'>
+            <div class='nf-view-title' data-ng-cloak>{{ viewTitle }}</div>
+            <img class='nf-view-illustration' src='{{ viewImage }}'>
+            <div class='nf-view-content' ng-transclude=''></div>
+          </div>
+          <div id='{{ viewId }}-notify-backend' class='nf-view-notify-backend' data-ng-if='backendName' data-ng-cloak>
+            <span class='nf-view-notify-backend-message'>Data for this view has been accessed through the {{ backendName }} backend.</span>
+          </div>
+        </div>
