@@ -187,7 +187,7 @@ insert into project (id, project) values
     ('28', 'Implemented prod/beta/alpha revision control and environment separation.'),
     ('29', 'Developed distribution scripts from Subversion to prod/beta/alpha environments.'),
     ('30', 'Developed scripts and implemented procedures for nightly backup of all code repositories and databases.'),
-    ('31', 'Implemented web based lottery application to award early time off to customer service smployees during slow shifts.'),
+    ('31', 'Implemented web based lottery application to award early time off to customer service employees during slow shifts.'),
     ('32', 'Nagios monitoring of daily fraud notifications from national credit companies.'),
     ('33', 'High demand Nagios maintenance and scripting.'),
     ('34', 'Assisted in maintaining Mircopatent''s Internet patent search service.'),
