@@ -35,7 +35,7 @@ use nixfixers_site_v_1;
 
 insert into location (id, location) values
     ('1',  '#!/nixfixers'),
-	('2',  'Atlas Distribution Company'),
+    ('2',  'Atlas Distribution Company'),
     ('3',  'T.actical A.wareness B.eacon S.ystems'),
     ('4',  'R.M.I. / G.E. Transportation'),
     ('5',  'jobTopia'),
@@ -49,7 +49,8 @@ insert into location (id, location) values
     ('13', 'AT&T'),
     ('14', 'SmartWorld Technologies'),
     ('15', 'Trak Systems'),
-    ('16', 'E.R.S.');
+    ('16', 'E.R.S.'),
+    ('17', 'The Wild Animal Sanctuary');
 
 insert into reviewer (id, last_name, first_name, title, orig_location_id, orig_role, curr_location, curr_role) values
     ('1', 'Lewis', 'Michael', null, '14', 'Head of Application Development', 'JPMorgan Chase', 'Managing Director, CTO'),
@@ -154,7 +155,8 @@ insert into skill (id, skill) values
     ('81', 'RCS'),
     ('82', 'Security'),
     ('83', 'Red Hat'),
-    ('84', 'ClearCase');
+    ('84', 'ClearCase'),
+    ('85', 'SVN');
 
 insert into project (id, project) values
     ('1',  'Designed and built the #!/nixfixers public facing website.'),
@@ -221,7 +223,9 @@ insert into project (id, project) values
     ('62', 'Debugged and rewrote internal flat file database routines.'),
     ('63', 'Maintained and redesigned the Record Trak record/book/video store P.O.S. software suite.'),
     ('64', 'Developed a unit price integrity module with reliable precision to fourteen decimal places.'), ##  ERS
-    ('65', 'Assisted in the development of the Electronic Price Management System application suite.');
+    ('65', 'Assisted in the development of the Electronic Price Management System application suite.'),
+    ('66', 'Developed nightly Nagios configuration backup Perl scripts.'), ## TWAS
+    ('67', 'Installed and configured Nagios and Apache servers.');
 
 insert into resume (location_id, project_id, skill_id) values
     ##  Nixfixers
@@ -254,13 +258,15 @@ insert into resume (location_id, project_id, skill_id) values
     ('1',  '3',  '77'), # NF - GPG - Sys Adm
     ('1',  '3',  '78'), # NF - GPG - Sysadmin
     ('1',  '3',  '82'), # NF - GPG - Security
-    ('1',  '4',  '24'), # NF - CVS/SVN - SVN
-    ('1',  '4',  '25'), # NF - CVS/SVN - CVS
-    ('1',  '4',  '77'), # NF - CVS/SVN - Sys Adm
-    ('1',  '4',  '78'), # NF - CVS/SVN - Sysadmin
-    ('1',  '5',  '24'), # NF - SVN - SVN
-    ('1',  '5',  '77'), # NF - SVN - Sys Adm
-    ('1',  '5',  '78'), # NF - SVN - Sysadmin
+    ('1',  '4',  '24'), # NF - CVS/Subversion - Subversion
+    ('1',  '4',  '85'), # NF - CVS/Subversion - SVN
+    ('1',  '4',  '25'), # NF - CVS/Subversion - CVS
+    ('1',  '4',  '77'), # NF - CVS/Subversion - Sys Adm
+    ('1',  '4',  '78'), # NF - CVS/Subversion - Sysadmin
+    ('1',  '5',  '24'), # NF - Subversion - Subversion
+    ('1',  '5',  '85'), # NF - Subversion - SVN
+    ('1',  '5',  '77'), # NF - Subversion - Sys Adm
+    ('1',  '5',  '78'), # NF - Subversion - Sysadmin
     ('1',  '6',  '25'), # NF - CVS - CVS
     ('1',  '6',  '77'), # NF - CVS - Sys Adm
     ('1',  '6',  '78'), # NF - CVS - Sysadmin
@@ -273,6 +279,7 @@ insert into resume (location_id, project_id, skill_id) values
     ('1',  '7',  '21'), # NF - Sysadmin - Apache
     ('1',  '7',  '22'), # NF - Sysadmin - Sendmail
     ('1',  '7',  '24'), # NF - Sysadmin - Subversion
+    ('1',  '7',  '85'), # NF - Sysadmin - SVN
     ('1',  '7',  '25'), # NF - Sysadmin - CVS
     ('1',  '7',  '26'), # NF - Sysadmin - ksh
     ('1',  '7',  '27'), # NF - Sysadmin - OpenBSD
@@ -504,6 +511,7 @@ insert into resume (location_id, project_id, skill_id) values
     ('7',  '26', '19'), # Cablevision - Sigma - bash
     ('7',  '26', '26'), # Cablevision - Sigma - ksh
     ('7',  '26', '24'), # Cablevision - Sigma - Subversion
+    ('7',  '26', '85'), # Cablevision - Sigma - SVN
     ('7',  '27', '11'), # Cablevision - Sysadmin - MySQL
     ('7',  '27', '17'), # Cablevision - Sysadmin - Linux
     ('7',  '27', '18'), # Cablevision - Sysadmin - Ubuntu
@@ -513,6 +521,7 @@ insert into resume (location_id, project_id, skill_id) values
     ('7',  '27', '19'), # Cablevision - Sysadmin - bash
     ('7',  '27', '26'), # Cablevision - Sysadmin - ksh
     ('7',  '27', '24'), # Cablevision - Sysadmin - Subversion
+    ('7',  '27', '85'), # Cablevision - Sysadmin - SVN
     ('7',  '27', '64'), # Cablevision - Sysadmin - Tomcat
     ('7',  '27', '21'), # Cablevision - Sysadmin - Apache
     ('7',  '27', '65'), # Cablevision - Sysadmin - Samba
@@ -533,6 +542,7 @@ insert into resume (location_id, project_id, skill_id) values
     ('7',  '28', '19'), # Cablevision - EnvSep - bash
     ('7',  '28', '26'), # Cablevision - EnvSep - ksh
     ('7',  '28', '24'), # Cablevision - EnvSep - Subversion
+    ('7',  '28', '85'), # Cablevision - EnvSep - SVN
     ('7',  '28', '64'), # Cablevision - EnvSep - Tomcat
     ('7',  '28', '21'), # Cablevision - EnvSep - Apache
     ('7',  '28', '77'), # Cablevision - EnvSep - Sys Adm
@@ -546,6 +556,7 @@ insert into resume (location_id, project_id, skill_id) values
     ('7',  '29', '19'), # Cablevision - Distro - bash
     ('7',  '29', '26'), # Cablevision - Distro - ksh
     ('7',  '29', '24'), # Cablevision - Distro - Subversion
+    ('7',  '29', '85'), # Cablevision - Distro - SVN
     ('7',  '29', '64'), # Cablevision - Distro - Tomcat
     ('7',  '29', '21'), # Cablevision - Distro - Apache
     ('7',  '29', '77'), # Cablevision - Distro - Sys Adm
@@ -560,6 +571,7 @@ insert into resume (location_id, project_id, skill_id) values
     ('7',  '30', '19'), # Cablevision - Backup - bash
     ('7',  '30', '26'), # Cablevision - Backup - ksh
     ('7',  '30', '24'), # Cablevision - Backup - Subversion
+    ('7',  '30', '85'), # Cablevision - Backup - SVN
     ('7',  '30', '67'), # Cablevision - Backup - cron
     ('7',  '30', '77'), # Cablevision - Backup - Sys Adm
     ('7',  '30', '78'), # Cablevision - Backup - Sysadmin
@@ -577,6 +589,7 @@ insert into resume (location_id, project_id, skill_id) values
     ('7',  '31', '19'), # Cablevision - Lottery - bash
     ('7',  '31', '26'), # Cablevision - Lottery - ksh
     ('7',  '31', '24'), # Cablevision - Lottery - Subversion
+    ('7',  '31', '85'), # Cablevision - Lottery - SVN
     ('7',  '53', '62'), # Cablevision - Security - Java
     ('7',  '53', '63'), # Cablevision - Security - JSP
     ('7',  '53', '11'), # Cablevision - Security - MySQL
@@ -589,6 +602,7 @@ insert into resume (location_id, project_id, skill_id) values
     ('7',  '53', '19'), # Cablevision - Security - bash
     ('7',  '53', '26'), # Cablevision - Security - ksh
     ('7',  '53', '24'), # Cablevision - Security - Subversion
+    ('7',  '53', '85'), # Cablevision - Security - SVN
     ('7',  '53', '82'), # Cablevision - Security - Security
     ('7',  '54', '16'), # Cablevision - Kernel - Unix
     ('7',  '54', '27'), # Cablevision - Kernel - OpenBSD
@@ -822,4 +836,17 @@ insert into resume (location_id, project_id, skill_id) values
 
     ##  ERS
     ('16', '64', '61'), # ERS - Unit - C++
-    ('16', '65', '61'); # ERS - EPMS - C++
+    ('16', '65', '61'), # ERS - EPMS - C++
+
+    ##  TWAS
+    ('17', '66', '2'),  # TWAS - Nagios Backup - Perl
+    ('17', '66', '67'), # TWAS - Nagios Backup - cron
+    ('17', '66', '26'), # TWAS - Nagios Backup - ksh
+    ('17', '66', '60'), # TWAS - Nagios Backup - Nagios
+    ('17', '67', '16'), # TWAS - Nagios - Unix
+    ('17', '67', '27'), # TWAS - Nagios - OpenBSD
+    ('17', '67', '71'), # TWAS - Nagios - BSD
+    ('17', '67', '21'), # TWAS - Nagios - Apache
+    ('17', '67', '60'), # TWAS - Nagios - Nagios
+    ('17', '67', '77'), # TWAS - Nagios - System Administration
+    ('17', '67', '78'); # TWAS - Nagios - Sysadmin

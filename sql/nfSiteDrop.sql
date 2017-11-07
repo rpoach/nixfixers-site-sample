@@ -31,4 +31,3 @@
 #####
 
 drop database if exists nixfixers_site_v_1;
-drop user 'nixfixers_site'@'localhost';

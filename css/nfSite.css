@@ -44,6 +44,11 @@ body {
   max-width: 100%;
   overflow-x: hidden;
   visibility: hidden;
+  user-select: none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -o-user-select: none;
 }
 
 body.visible {

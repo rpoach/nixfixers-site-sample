@@ -30,9 +30,6 @@
 #
 #####
 
-create user 'nixfixers_site'@'localhost' identified by 'changethis';
-create user 'nixfixers_site'@'127.0.0.1' identified by 'changethis';
-create user 'nixfixers_site'@'::1' identified by 'changethis';
-grant select on nixfixers_site_v_1.* to 'nixfixers_site'@'localhost';
-grant select on nixfixers_site_v_1.* to 'nixfixers_site'@'127.0.0.1';
-grant select on nixfixers_site_v_1.* to 'nixfixers_site'@'::1';
+drop user 'nixfixers_site'@'localhost';
+drop user 'nixfixers_site'@'127.0.0.1';
+drop user 'nixfixers_site'@'::1';
