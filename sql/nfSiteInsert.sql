@@ -50,7 +50,9 @@ insert into location (id, location) values
     ('14', 'SmartWorld Technologies'),
     ('15', 'Trak Systems'),
     ('16', 'E.R.S.'),
-    ('17', 'The Wild Animal Sanctuary');
+    ('17', 'The Wild Animal Sanctuary'),
+    ('18', 'Mastercard'),
+    ('19', 'Sirius');
 
 insert into reviewer (id, last_name, first_name, title, orig_location_id, orig_role, curr_location, curr_role) values
     ('1', 'Lewis', 'Michael', null, '14', 'Head of Application Development', 'JPMorgan Chase', 'Managing Director, CTO'),
@@ -225,7 +227,10 @@ insert into project (id, project) values
     ('64', 'Developed a unit price integrity module with reliable precision to fourteen decimal places.'), ##  ERS
     ('65', 'Assisted in the development of the Electronic Price Management System application suite.'),
     ('66', 'Developed nightly Nagios configuration backup Perl scripts.'), ## TWAS
-    ('67', 'Installed and configured Nagios and Apache servers.');
+    ('67', 'Installed and configured Nagios and Apache servers.'),
+    ('68', 'Identified and corrected memory leaks in core credit processing servers.'), ## Mastercard
+    ('69', 'Updated credit processing servers to provide current connection information on request.'),
+    ('70', 'Updated error condition checking and reporting for credit processing servers.');
 
 insert into resume (location_id, project_id, skill_id) values
     ##  Nixfixers
@@ -849,4 +854,30 @@ insert into resume (location_id, project_id, skill_id) values
     ('17', '67', '21'), # TWAS - Nagios - Apache
     ('17', '67', '60'), # TWAS - Nagios - Nagios
     ('17', '67', '77'), # TWAS - Nagios - System Administration
-    ('17', '67', '78'); # TWAS - Nagios - Sysadmin
+    ('17', '67', '78'), # TWAS - Nagios - Sysadmin
+
+    ##  MASTERCARD
+    ('18', '68', '53'), ## Mastercard - Memleak - C
+    ('18', '68', '13'), ## Mastercard - Memleak - Git
+    ('18', '68', '16'), ## Mastercard - Memleak - Unix
+    ('18', '68', '17'), ## Mastercard - Memleak - Linux
+    ('18', '68', '18'), ## Mastercard - Memleak - Ubuntu
+    ('18', '68', '19'), ## Mastercard - Memleak - bash
+    ('18', '68', '35'), ## Mastercard - Memleak - ssh
+    ('18', '68', '44'), ## Mastercard - Memleak - Telecommute
+    ('18', '69', '53'), ## Mastercard - Req - C
+    ('18', '69', '13'), ## Mastercard - Req - Git
+    ('18', '69', '16'), ## Mastercard - Req - Unix
+    ('18', '69', '17'), ## Mastercard - Req - Linux
+    ('18', '69', '18'), ## Mastercard - Req - Ubuntu
+    ('18', '69', '19'), ## Mastercard - Req - bash
+    ('18', '69', '35'), ## Mastercard - Req - ssh
+    ('18', '69', '44'), ## Mastercard - Req - Telecommute
+    ('18', '70', '2'),  ## Mastercard - Checks - Perl
+    ('18', '70', '13'), ## Mastercard - Checks - Git
+    ('18', '70', '16'), ## Mastercard - Checks - Unix
+    ('18', '70', '17'), ## Mastercard - Checks - Linux
+    ('18', '70', '18'), ## Mastercard - Checks - Ubuntu
+    ('18', '70', '19'), ## Mastercard - Checks - bash
+    ('18', '70', '35'), ## Mastercard - Checks - ssh
+    ('18', '70', '44'); ## Mastercard - Checks - Telecommute
